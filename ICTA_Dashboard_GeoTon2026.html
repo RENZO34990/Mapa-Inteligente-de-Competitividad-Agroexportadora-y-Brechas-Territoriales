@@ -108,7 +108,7 @@ const avgNorte = +avg(NORTE.map(d=>d.ICTA));
 document.getElementById('metrics').innerHTML = [
   {label:'ICTA promedio Macro Sur', val:avgSur.toFixed(1), sub:'Arequipa · Moquegua · Cusco · Puno · Tacna'},
   {label:'ICTA promedio Norte', val:avgNorte.toFixed(1), sub:'Piura · Lambayeque · La Libertad · Ancash · Tumbes · Cajamarca'},
-  {label:'Brecha Norte–Sur', val:'+'+(avgNorte-avgSur).toFixed(1)+' pts', sub:'Norte supera al sur en puntos ICTA'},
+  {label:'Brecha Norte–Sur', val:'+'+(avgNorte-avgSur).toFixed(1)+' pts'},
   {label:'Mejor Macro Sur', val:'Arequipa', sub:'ICTA 76.9 — liderazgo claro'},
   {label:'Mayor cuello de botella Sur', val:'D2/D3 IDH+Pobreza', sub:'Puno y Cusco — oportunidad de intervención'},
 ].map(m=>`<div class="metric"><div class="metric-label">${m.label}</div><div class="metric-value" style="font-size:${String(m.val).length>8?'13px':'20px'}">${m.val}</div><div class="metric-sub">${m.sub}</div></div>`).join('');
